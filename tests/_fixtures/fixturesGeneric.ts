@@ -2,13 +2,19 @@ import { test as base } from '@playwright/test';
 import { Logger } from '../../src/common/logger/Logger';
 import { generateNewUserData } from '../../src/common/testData/generateNewUserData';
 
+export interface GenerateNewUserData {
+  username: string;
+  email: string;
+  password: string;
+}
+
 export const test = base.extend<
   {
-    usersNumber;
-    contextsNumber;
-    pages;
-    user;
-    users;
+    usersNumber: number;
+    contextsNumber: number;
+    pages: any[];
+    user: GenerateNewUserData;
+    users: GenerateNewUserData[];
     infoTestLog: string;
   },
   {

@@ -4,7 +4,7 @@ import { SignInPage } from '../../src/ui/pages/auth/SignInPage';
 import { HomePage } from '../../src/ui/pages/HomePage';
 
 export const test = base.extend<{
-  signUpUsers;
+  signUpUsers: any[];
   signUpPage: SignUpPage;
   signInPage: SignInPage;
   homePage: HomePage;

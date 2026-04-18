@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-export function generateNewUserData(logger = null) {
+export function generateNewUserData(logger) {
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
 

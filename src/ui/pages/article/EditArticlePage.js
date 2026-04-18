@@ -12,7 +12,7 @@ export class EditArticlePage {
   }
 
   tagListItem(tagName) {
-    return this.page.getByText(tagName);
+    return this.page.locator('.tag-list span').filter({ hasText: tagName });
   }
 
   async step(title, stepToRun) {
@@ -37,7 +37,7 @@ export class EditArticlePage {
     });
   }
 
-  async removeArtcileTags(tags) {
+  async removeArticleTags(tags) {
     await this.step(`Remove article tags`, async () => {
       for (let i = 0; i < tags.length; i++) {
         await this.tagListItem(tags[i]).locator('.ion-close-round').click();
