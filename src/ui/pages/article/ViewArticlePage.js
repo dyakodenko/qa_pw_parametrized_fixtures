@@ -5,7 +5,9 @@ export class ViewArticlePage {
     this.page = page;
     this.userId = userId;
     this.articleTitleHeader = page.getByRole('heading');
-    this.editArticleButton = page.getByText('Edit Article').nth(0);
+    this.editArticleButton = page
+      .getByRole('link', { name: 'Edit Article' })
+      .nth(1);
   }
 
   authorLinkInArticleHeader(username) {
